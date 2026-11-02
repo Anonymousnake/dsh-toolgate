@@ -2,7 +2,7 @@
 
 **Bring only the tools you need into the next prompt.**
 
-[中文](README.md) · [npm](https://www.npmjs.com/package/@jidekaixin2dian/dsh-toolgate/v/0.1.6) · [Marketplace](https://awesome-dsh-plugin.com/p/jidekaixin2dian/dsh-toolgate/) · [Download](https://github.com/jidekaixin2dian/dsh-toolgate/releases/latest) · [Changelog](CHANGELOG.md)
+[中文](README.md) · [npm](https://www.npmjs.com/package/@jidekaixin2dian/dsh-toolgate/v/0.1.7) · [Marketplace](https://awesome-dsh-plugin.com/p/jidekaixin2dian/dsh-toolgate/) · [Download](https://github.com/jidekaixin2dian/dsh-toolgate/releases/latest) · [Changelog](CHANGELOG.md)
 
 Toolgate is an MCP server, skill and context-budget management plugin for DeepSeek Harness (DSH). Have many MCP servers installed but only a few relevant to the task? Hide tool definitions by server in one settings page and restore them when needed; configuration stays in place and MCP processes keep running.
 

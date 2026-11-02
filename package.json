@@ -1,6 +1,6 @@
 {
   "name": "@jidekaixin2dian/dsh-toolgate",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Manage MCP servers and skills in one place; hide or restore groups of tool definitions to control what enters the next prompt.",
   "icon": "icon.svg",
   "type": "module",

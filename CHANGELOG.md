@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.7 — 2026-11-02
+
+- 修复设置页空白：0.1.6 新增的「项目与反馈」直接读取 `ctx.locale`，而插件未声明 `locale` 服务；较新的宿主对该读取直接抛错（`cannot get property "locale" without inject`），整个 `settings.section` 条目被错误边界吞掉，点进「工具闸门」只剩空白。
+- 在 `inject` 中声明 `locale`，并将该读取包在 `try/catch` 里回退到 `navigator.language`，与其他可选服务读取保持一致。
+- Fix blank settings page: the 0.1.6 project/feedback block read `ctx.locale` without declaring the service. Newer hosts throw on that read, the whole `settings.section` entry is swallowed by the error boundary, and the Toolgate page renders empty. `locale` is now declared and the read falls back to `navigator.language`.
+- 新增 3 项客户端渲染回归测试，覆盖「宿主拒绝 locale 服务」时设置页仍渲染，以及中英文文案跟随语言。
+
 ## 0.1.6 — 2026-10-31
 
 - 设置页新增「项目与反馈」入口，在预算、MCP、Skills 页面均可打开对应 GitHub 项目或新建反馈；页面加载失败时也保留入口。

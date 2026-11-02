@@ -2,7 +2,7 @@
 
 **让下一轮 prompt 只带需要的工具。**
 
-[English](README.en.md) · [npm](https://www.npmjs.com/package/@jidekaixin2dian/dsh-toolgate/v/0.1.6) · [插件市场](https://awesome-dsh-plugin.com/p/jidekaixin2dian/dsh-toolgate/) · [下载](https://github.com/jidekaixin2dian/dsh-toolgate/releases/latest) · [更新记录](CHANGELOG.md)
+[English](README.en.md) · [npm](https://www.npmjs.com/package/@jidekaixin2dian/dsh-toolgate/v/0.1.7) · [插件市场](https://awesome-dsh-plugin.com/p/jidekaixin2dian/dsh-toolgate/) · [下载](https://github.com/jidekaixin2dian/dsh-toolgate/releases/latest) · [更新记录](CHANGELOG.md)
 
 Toolgate 是 DeepSeek Harness（DSH）的 MCP、Skill 和上下文预算管理插件。装了很多 MCP，却只有少数工具与当前任务有关？在同一个设置页按服务器隐藏不需要的工具定义，需要时再恢复；配置保留，MCP 进程继续运行。
 
