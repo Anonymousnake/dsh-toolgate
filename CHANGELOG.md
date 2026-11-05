@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased
+
+- 默认固定宿主升级到 DSH rc.5，兼容验证扩展到 **0.2.2-rc.1**（2026-11-04 发布；
+  其开发者侧变更——统一右键菜单、设置页图标槽、PTC/工具链重构——均不触及本
+  插件的绑定面与行为）；保留 rc.2–rc.4 回归。
+- The default pinned host moves to DSH rc.5 and verified coverage extends to
+  **0.2.2-rc.1** (released 2026-11-04; its developer-facing changes — unified
+  context menu, settings icon slot, PTC/tooling restructuring — do not touch
+  this plugin's bound surface or behavior). rc.2–rc.4 regressions are retained.
+- `scripts/host.mjs` 按条目携带完整 tag（0.2.2 行不再复用 `dsh-v0.2.1-` 前缀拼接），
+  宿主目录缺失时给出 setup 提示而非 TypeError。
+- `scripts/host.mjs` now carries a full tag per entry (the 0.2.2 line no longer
+  fits the `dsh-v0.2.1-<version>` prefix scheme) and reports the setup step when
+  the host checkout is missing instead of crashing.
+
 ## 0.1.7 — 2026-11-02
 
 - 修复设置页空白：0.1.6 新增的「项目与反馈」直接读取 `ctx.locale`，而插件未声明 `locale` 服务；较新的宿主对该读取直接抛错（`cannot get property "locale" without inject`），整个 `settings.section` 条目被错误边界吞掉，点进「工具闸门」只剩空白。

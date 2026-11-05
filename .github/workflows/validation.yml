@@ -42,7 +42,7 @@ jobs:
         run: npm run test:host
         env:
           TOOLGATE_BROWSER: '1'
-          TOOLGATE_RESULTS: work/results/rc4
+          TOOLGATE_RESULTS: work/results/rc5
       - name: Prepare minimum supported host
         run: npm run setup:host
         env:
@@ -63,6 +63,26 @@ jobs:
           TOOLGATE_HOST_VERSION: rc.3
           TOOLGATE_BROWSER: '1'
           TOOLGATE_RESULTS: work/results/rc3
+      - name: Prepare 0.2.1-rc.4 compatibility host
+        run: npm run setup:host
+        env:
+          TOOLGATE_HOST_VERSION: rc.4
+      - name: 0.2.1-rc.4 host and browser regression
+        run: npm run test:host
+        env:
+          TOOLGATE_HOST_VERSION: rc.4
+          TOOLGATE_BROWSER: '1'
+          TOOLGATE_RESULTS: work/results/rc4
+      - name: Prepare 0.2.2-rc.1 compatibility host
+        run: npm run setup:host
+        env:
+          TOOLGATE_HOST_VERSION: 0.2.2-rc.1
+      - name: 0.2.2-rc.1 host and browser regression
+        run: npm run test:host
+        env:
+          TOOLGATE_HOST_VERSION: 0.2.2-rc.1
+          TOOLGATE_BROWSER: '1'
+          TOOLGATE_RESULTS: work/results/022-rc1
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

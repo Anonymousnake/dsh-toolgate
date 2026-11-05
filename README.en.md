@@ -28,7 +28,7 @@ Snapshot: **2026-10-29**. GitHub counts release-asset requests, including checks
 
 ## Install and update
 
-Requires **DSH >=0.2.1-rc.2 and Node >=24**. CI verifies DSH rc.2 / rc.3 / rc.4.
+Requires **DSH >=0.2.1-rc.2 and Node >=24**. CI verifies DSH rc.2 / rc.3 / rc.4 / rc.5 / 0.2.2-rc.1.
 
 Search for **dsh-toolgate**, author **jidekaixin2dian**, in the marketplace. Both npm and GitHub sources support version checks. Once the catalog recognizes the npm package it prefers npm; existing users can check under installed plugins. Catalog and registry data may take time to refresh.
 

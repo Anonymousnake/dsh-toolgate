@@ -28,7 +28,7 @@ Toolgate 是 DeepSeek Harness（DSH）的 MCP、Skill 和上下文预算管理�
 
 ## 安装与更新
 
-需要 **DSH >=0.2.1-rc.2、Node >=24**；持续验证 DSH rc.2 / rc.3 / rc.4。
+需要 **DSH >=0.2.1-rc.2、Node >=24**；持续验证 DSH rc.2 / rc.3 / rc.4 / rc.5 / 0.2.2-rc.1。
 
 在插件市场搜索 **dsh-toolgate**，确认作者为 **jidekaixin2dian**。npm 与 GitHub 来源都支持版本检查；市场识别 npm 包后优先使用 npm，可在「已安装」中检查更新。目录与 registry 数据可能有同步延迟。
 
