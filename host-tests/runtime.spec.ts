@@ -82,7 +82,19 @@ async function harness(options: { connection?: boolean; pluginConfig?: Record<st
     })
   }
   const create = (id: string, cwd = a) => ctx.agentLoop.create(SessionId(id), { provider: 'mock', model: 'mock' }, { cwd })
-  const execute = (agent: any, args: object) => ctx.tools.execute({ agent, callId: ToolCallId('audit-' + sequence++), name: 'toolgate', arguments: args, signal: new AbortController().signal })
+  // 0.2.2 moved tools.execute to raw call batches (tools.executable marks the
+  // generation); older hosts take one typed call and resolve to its outcome.
+  const execute = async (agent: any, args: object) => {
+    if (typeof ctx.tools.executable === 'function') {
+      const batch = await ctx.tools.execute({
+        agent,
+        signal: new AbortController().signal,
+        calls: [{ id: ToolCallId('audit-' + sequence++), name: 'toolgate', arguments: JSON.stringify(args) }],
+      })
+      return batch.results[0]!.result
+    }
+    return ctx.tools.execute({ agent, callId: ToolCallId('audit-' + sequence++), name: 'toolgate', arguments: args, signal: new AbortController().signal })
+  }
   return { ctx, origin, home, a, b, profile, post, create, execute, get fiber() { return fiber }, reload: async () => { fiber = await ctx.plugin(plugin) } }
 }
 
