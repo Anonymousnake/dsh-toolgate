@@ -26,6 +26,7 @@
   ],
   "scripts": {
     "test": "node --test \"test/*.test.js\"",
+    "test:contracts": "node --test \"test/contracts/*.test.mjs\"",
     "setup:host": "node scripts/setup-host.mjs",
     "test:host": "node scripts/test-host.mjs",
     "pack:check": "node scripts/pack-check.mjs"
